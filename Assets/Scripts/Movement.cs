@@ -6,8 +6,8 @@ public class Movement : MonoBehaviour
     public float Speed = 5.0f;
     [SerializeField] private KeyCode moveUp = KeyCode.W;
     [SerializeField] private KeyCode moveDown = KeyCode.S;
-    [SerializeField] private KeyCode moveLeft = KeyCode.A;
-    [SerializeField] private KeyCode moveRight = KeyCode.D;
+    //[SerializeField] private KeyCode moveLeft = KeyCode.A;
+    //[SerializeField] private KeyCode moveRight = KeyCode.D;
 
     [Header("Rotacion")]
     [SerializeField] private KeyCode rotateLeft = KeyCode.Q;
@@ -38,15 +38,15 @@ public class Movement : MonoBehaviour
                 transform.position += new Vector3(0, -Speed * Time.deltaTime, 0);
             }
 
-            if (Input.GetKey(moveLeft))
-            {
-                transform.position += new Vector3(-Speed * Time.deltaTime, 0, 0);
-            }
+            //if (Input.GetKey(moveLeft))
+            //{
+            //    transform.position += new Vector3(-Speed * Time.deltaTime, 0, 0);
+            //}
 
-            if (Input.GetKey(moveRight))
-            {
-                transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
-            }
+            //if (Input.GetKey(moveRight))
+            //{
+            //    transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
+            //}
 
             // Rotacion del sprite
             if (Input.GetKeyDown(rotateLeft))
@@ -69,7 +69,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // Fisicas
     {
         
     }
