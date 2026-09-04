@@ -2,13 +2,13 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour
+public class UiSettingsMenu : MonoBehaviour
 {
     [Header("Canvas")]
     [SerializeField] private GameObject settingsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private PauseMenu pauseState;
+    [SerializeField] private UiPauseMenu pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnBack;

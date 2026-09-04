@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class UiMainMenu : MonoBehaviour
 {
     [Header("Canvas")]
     [SerializeField] private GameObject mainMenuCanvas;
@@ -43,8 +44,7 @@ public class MainMenu : MonoBehaviour
     // Button Events
     private void OnStartClicked()
     {
-        Time.timeScale = 1;
-        mainMenuCanvas.SetActive(false);
+        SceneManager.LoadScene("Gameplay");
     }
 
     private void OnSettingsClicked()

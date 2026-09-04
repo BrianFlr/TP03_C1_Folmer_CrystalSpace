@@ -1,14 +1,13 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CreditsMenu : MonoBehaviour
+public class UiCreditsMenu : MonoBehaviour
 {
     [Header("Canvas")]
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private PauseMenu pauseState;
+    [SerializeField] private UiPauseMenu pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnBack;
