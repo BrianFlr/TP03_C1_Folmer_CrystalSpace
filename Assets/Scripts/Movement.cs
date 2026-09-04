@@ -3,7 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [Header ("Movimiento")]
-    public float Speed = 5.0f;
+    public float Speed = 15.0f;
     [SerializeField] private KeyCode moveUp = KeyCode.W;
     [SerializeField] private KeyCode moveDown = KeyCode.S;
     //[SerializeField] private KeyCode moveLeft = KeyCode.A;
@@ -17,37 +17,19 @@ public class Movement : MonoBehaviour
     [SerializeField] private float rotateSpeed = 10.0f;
     [SerializeField] private KeyCode changeColor = KeyCode.R;
 
+    private Rigidbody2D rigidBody;
     private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
         if (Time.timeScale == 1) // For isPause (Temporal)
         {
-            // Movimiento del sprite
-            if (Input.GetKey(moveUp))
-            {
-                transform.position += new Vector3(0, Speed * Time.deltaTime, 0);
-            }
-
-            if (Input.GetKey(moveDown))
-            {
-                transform.position += new Vector3(0, -Speed * Time.deltaTime, 0);
-            }
-
-            //if (Input.GetKey(moveLeft))
-            //{
-            //    transform.position += new Vector3(-Speed * Time.deltaTime, 0, 0);
-            //}
-
-            //if (Input.GetKey(moveRight))
-            //{
-            //    transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
-            //}
-
             // Rotacion del sprite
             if (Input.GetKeyDown(rotateLeft))
             {
@@ -71,6 +53,26 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate() // Fisicas
     {
-        
+        // Movimiento
+        if (Input.GetKey(moveUp))
+        {
+            rigidBody.AddForce(new Vector3(0, Speed * Time.fixedDeltaTime, 0));
+        }
+    
+        if (Input.GetKey(moveDown))
+        {
+            rigidBody.AddForce(new Vector3(0, -Speed * Time.fixedDeltaTime, 0));
+        }
+    
+        //if (Input.GetKey(moveLeft))
+        //{
+        //    rigidBody.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
+        //}
+    
+        //if (Input.GetKey(moveRight))
+        //{
+        //    rigidBody.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
+        //}
+
     }
 }

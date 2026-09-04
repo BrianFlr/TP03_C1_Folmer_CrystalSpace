@@ -409,6 +409,14 @@ PrefabInstance:
       propertyPath: moveDown
       value: 274
       objectReference: {fileID: 0}
+    - target: {fileID: 4188432349518530314, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188432349518530314, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.59
+      objectReference: {fileID: 0}
     - target: {fileID: 5788056504614851482, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -1122,7 +1130,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 485669271}
+  - {fileID: 352471504}
   - {fileID: 1155469042}
   - {fileID: 600895689}
   - {fileID: 188865353}
-  - {fileID: 352471504}
