@@ -2,7 +2,18 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Canvas")]
+    [SerializeField] private GameObject mainMenuCanvas;
+    [SerializeField] private GameObject settingsCanvas;
+    [SerializeField] private GameObject creditsCanvas;
+    [SerializeField] private GameObject pauseCanvas;
+
+
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         

@@ -67,6 +67,10 @@ public class Movement : MonoBehaviour
                 spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
         
     }
 }
