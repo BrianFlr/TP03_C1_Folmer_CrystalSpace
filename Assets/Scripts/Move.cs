@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Move : MonoBehaviour
 {
     public float Speed = 5.0f;
     [SerializeField] private KeyCode moveUp = KeyCode.W;

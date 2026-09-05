@@ -20,8 +20,8 @@ public class UiSettingsMenu : MonoBehaviour
     [SerializeField] private TMP_Text textPlayer2Speed;
 
     [Header("Players")]
-    [SerializeField] private Movement Player1;
-    [SerializeField] private Movement Player2;
+    [SerializeField] private Move Player1;
+    [SerializeField] private Move Player2;
 
 
     private void Awake()
