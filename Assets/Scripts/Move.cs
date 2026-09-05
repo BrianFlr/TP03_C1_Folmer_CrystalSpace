@@ -10,11 +10,11 @@ public class Move : MonoBehaviour
 
     private bool isContinuous;
 
-    private Rigidbody2D rigidBody;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() // Fisicas
@@ -24,28 +24,28 @@ public class Move : MonoBehaviour
             // Movimiento continuo por impulso de fuerza
             if (Input.GetKey(moveUp))
             {
-                rigidBody.AddForce(new Vector3(0, Speed * Time.fixedDeltaTime, 0));
+                rb.AddForce(new Vector3(0, Speed * Time.fixedDeltaTime, 0));
             }
 
             if (Input.GetKey(moveDown))
             {
-                rigidBody.AddForce(new Vector3(0, -Speed * Time.fixedDeltaTime, 0));
+                rb.AddForce(new Vector3(0, -Speed * Time.fixedDeltaTime, 0));
             }
 
             //if (Input.GetKey(moveLeft))
             //{
-            //    rigidBody.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
+            //    rb.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
             //}
 
             //if (Input.GetKey(moveRight))
             //{
-            //    rigidBody.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
+            //    rb.AddForce(new Vector3(-Speed * Time.fixedDeltaTime, 0, 0));
             //}
 
             // Limitar la velocidad de empuje para que no siga aumentando infinitamente
-            //if (rigidBody.linearVelocity.y > 5)
+            //if (rb.linearVelocity.y > 5)
             //{
-            //    rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, 5);
+            //    rb.linearVelocity = new Vector2(rigidBody.linearVelocity.x, 5);
             //}
         }
         else
@@ -53,22 +53,22 @@ public class Move : MonoBehaviour
             // Movimiento normal por posicionamiento
             if (Input.GetKey(moveUp))
             {
-                rigidBody.position += new Vector2(0, Speed * Time.fixedDeltaTime);
+                rb.position += new Vector2(0, Speed * Time.fixedDeltaTime);
             }
 
             if (Input.GetKey(moveDown))
             {
-                rigidBody.position += new Vector2(0, -Speed * Time.fixedDeltaTime);
+                rb.position += new Vector2(0, -Speed * Time.fixedDeltaTime);
             }
 
             //if (Input.GetKey(moveLeft))
             //{
-            //    rigidBody.position = new Vector3(-Speed * Time.fixedDeltaTime, 0, 0);
+            //    rb.position = new Vector3(-Speed * Time.fixedDeltaTime, 0, 0);
             //}
 
             //if (Input.GetKey(moveRight))
             //{
-            //    rigidBody.position = new Vector3(-Speed * Time.fixedDeltaTime, 0, 0);
+            //    rb.position = new Vector3(-Speed * Time.fixedDeltaTime, 0, 0);
             //}
         }
     }
