@@ -23,16 +23,6 @@ public class UiMainMenu : MonoBehaviour
         btnExit.onClick.AddListener(OnExitClicked);
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     private void OnDestroy()
     {
         btnStart.onClick.RemoveAllListeners();
@@ -44,6 +34,7 @@ public class UiMainMenu : MonoBehaviour
     // Button Events
     private void OnStartClicked()
     {
+        mainMenuCanvas.SetActive(false);
         SceneManager.LoadScene("Gameplay");
     }
 

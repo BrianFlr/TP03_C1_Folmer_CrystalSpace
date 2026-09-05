@@ -26,7 +26,7 @@ public class UiPauseMenu : MonoBehaviour
         btnExit.onClick.AddListener(OnExitClicked);
     }
 
-    void Update()
+    private void Update()
     {
         if (!mainMenuCanvas.activeSelf) // Checking if the MainMenu is active.
         {
