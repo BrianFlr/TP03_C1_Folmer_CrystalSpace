@@ -65,4 +65,17 @@ public class UiSettingsMenu : MonoBehaviour
         textPlayer2Speed.text = value.ToString("F2");
     }
 
+    private void OnPlayer1LongChanged(float value)
+    {
+        Player1.Speed = value;
+        textPlayer1Speed.text = value.ToString("F2");
+        transform.localScale = new Vector3(1, 10, 1);
+    }
+    private void OnPlayer2LongChanged(float value)
+    {
+        Player1.Speed = value;
+        textPlayer1Speed.text = value.ToString("F2");
+        transform.localScale = new Vector3(1, 10, 1);
+    }
+
 }

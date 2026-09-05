@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    [SerializeField] private float ballSpeed = 200.0f;
+    [SerializeField] private float ballSpeed = 20.0f;
     private Rigidbody2D ballRigidbody;
 
     private void Awake()
@@ -13,12 +13,12 @@ public class BallMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ballRigidbody.AddForce(new Vector3(ballSpeed * Time.fixedDeltaTime, 0, 0));
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        ballRigidbody.AddForce(new Vector3(ballSpeed * Time.fixedDeltaTime, 0, 0));
+        
     }
 }
