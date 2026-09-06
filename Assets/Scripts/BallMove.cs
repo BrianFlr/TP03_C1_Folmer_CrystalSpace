@@ -1,9 +1,15 @@
-using System;
 using UnityEngine;
 
 public class BallMove : MonoBehaviour
 {
-    [SerializeField] private float ballSpeed = 1.0f;
+    [SerializeField] private float ballSpeed = 5f;
+    [SerializeField] private float ballMaxSpeed = 25f;
+    [SerializeField] private float bosterSpeed = 0.1f;
+    private float initialAngleX = 1f;
+    private float initialAngleY = 0.4f;
+    private float timerBoostSpeed = 0f;
+    private float timeBoostSpeed = 2f;
+
     private Rigidbody2D rbBall;
 
     private void Awake()
@@ -11,22 +17,53 @@ public class BallMove : MonoBehaviour
         rbBall = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rbBall.AddForce(new Vector3(ballSpeed * Time.fixedDeltaTime, 0, 0));
+        // Creo una variable para asiganarle un valor random y así la pelota no vaya siempre para un mismo lado al comienzo
+        int randomValue = Random.Range(0,2);
+
+        if (randomValue == 0)
+        {
+            // Empujo la pelota hacia la derecha
+            Vector2 initialDirection = new Vector2(initialAngleX, initialAngleY).normalized; // Utilizo normalized para obtener sólo la dirección
+            rbBall.linearVelocity = initialDirection * ballSpeed;
+        }
+        else
+        {
+            // Empujo la pelota hacia la izquierda
+            Vector2 initialDirection = new Vector2(-initialAngleX, -initialAngleY).normalized;
+            rbBall.linearVelocity = initialDirection * ballSpeed;
+        }
     }
 
-    // Agrego velocidad con el tiempo
-    private void FixedUpdate()
+    private void Update()
     {
-        ballSpeed += 1;
-    }
+        // Registro el tiempo transcurrido
+        timerBoostSpeed += Time.deltaTime;
 
-    // Agrego velocidad cada vez que choca la pelota
+        // Aumento la velocidad de la pelota cada x segundos
+        if (timerBoostSpeed >= timeBoostSpeed)
+        {
+            if (ballSpeed < ballMaxSpeed)
+            {
+                ballSpeed += bosterSpeed;
+            }
+
+            // Le multiplico la dirección actual de la pelota a la nueva velocidad
+            rbBall.linearVelocity = rbBall.linearVelocity.normalized * ballSpeed;
+
+            // Reseteo el contador restando
+            timerBoostSpeed -= timeBoostSpeed;
+        }
+     }
+
+    // Deteccion de colisión de la pelota
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("SEE");
-        rbBall.AddForce(new Vector2(rbBall.position.x * ballSpeed, rbBall.position.y * ballSpeed));
+        // Aumento velocidad de la pelota por cada rebote
+        ballSpeed = Mathf.Clamp(ballSpeed + bosterSpeed, 0f, ballMaxSpeed);
+
+        // Le multiplico la dirección actual de la pelota a la nueva velocidad
+        rbBall.linearVelocity = rbBall.linearVelocity.normalized * ballSpeed;
     }
 }

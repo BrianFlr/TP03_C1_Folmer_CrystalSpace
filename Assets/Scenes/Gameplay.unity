@@ -596,9 +596,33 @@ PrefabInstance:
       value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6518257147045855174, guid: 0197b635c5057d147a90a2315a0704c6, type: 3}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692931117765816086, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -843,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 1177905192}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.11, y: 2.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -923,8 +947,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 619f29a2cd6203343a22206c03855dc7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BallMovement
-  ballSpeed: 20
+  m_EditorClassIdentifier: Assembly-CSharp::BallMove
+  ballSpeed: 5
+  ballMaxSpeed: 25
+  bosterSpeed: 0.1
 --- !u!4 &1280367545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1068488164717259837, guid: ec9ec683d78e1d54cbd3d9f16f3a77cf, type: 3}
