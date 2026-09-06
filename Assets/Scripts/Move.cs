@@ -17,6 +17,11 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        Speed = PlayerPrefs.GetFloat("PlayerSpeed", 10f);
+    }
+
     private void FixedUpdate() // Fisicas
     {
         if (isContinuous)

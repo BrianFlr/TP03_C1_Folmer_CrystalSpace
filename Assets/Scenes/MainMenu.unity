@@ -2483,51 +2483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375699057}
   m_CullTransparentMesh: 1
---- !u!1 &383584183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 383584185}
-  - component: {fileID: 383584184}
-  m_Layer: 0
-  m_Name: UI Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &383584184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383584183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18f004b7c967da44b15c47178ae0f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UiManager
-  isPause: 0
---- !u!4 &383584185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383584183}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 378.02777, y: 226.66417, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454205964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,7 +2714,6 @@ MonoBehaviour:
   creditsCanvas: {fileID: 1110032612}
   mainMenuCanvas: {fileID: 1719336450}
   pauseCanvas: {fileID: 2080134512}
-  pauseState: {fileID: 383584184}
   btnBack: {fileID: 1903509081}
 --- !u!114 &535391935
 MonoBehaviour:
@@ -3392,37 +3346,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636062452}
   m_CullTransparentMesh: 1
---- !u!1 &650015425
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 650015426}
-  m_Layer: 0
-  m_Name: ---Managers---
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &650015426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650015425}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 378.02777, y: 226.66417, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681751880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3519,6 @@ MonoBehaviour:
   settingsCanvas: {fileID: 782650436}
   creditsCanvas: {fileID: 1110032612}
   mainMenuCanvas: {fileID: 1719336450}
-  pauseState: {fileID: 383584184}
   btnContinue: {fileID: 1439280285}
   btnSettings: {fileID: 724828151}
   btnCredits: {fileID: 610068054}
@@ -8790,6 +8712,7 @@ GameObject:
   - component: {fileID: 1797543283}
   - component: {fileID: 1797543282}
   - component: {fileID: 1797543281}
+  - component: {fileID: 1797543285}
   m_Layer: 5
   m_Name: Canva Settings Menu
   m_TagString: Untagged
@@ -8832,7 +8755,6 @@ MonoBehaviour:
   settingsCanvas: {fileID: 782650436}
   mainMenuCanvas: {fileID: 1719336450}
   pauseCanvas: {fileID: 2080134512}
-  pauseState: {fileID: 383584184}
   btnBack: {fileID: 1598215437}
   sliderPlayer1Speed: {fileID: 1925171345}
   sliderPlayer2Speed: {fileID: 1902936070}
@@ -8903,6 +8825,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1797543285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797543279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539157e1d31e7d042acafe970955a7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSettingsMoveSpeed
 --- !u!1 &1804001139
 GameObject:
   m_ObjectHideFlags: 0
@@ -10529,5 +10463,3 @@ SceneRoots:
   - {fileID: 1797543280}
   - {fileID: 535391938}
   - {fileID: 1386008765}
-  - {fileID: 650015426}
-  - {fileID: 383584185}

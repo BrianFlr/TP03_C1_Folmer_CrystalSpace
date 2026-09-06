@@ -31,7 +31,7 @@ public class UiMainMenu : MonoBehaviour
         btnExit.onClick.RemoveAllListeners();
     }
 
-    // Button Events
+    // Eventos de botones
     private void OnStartClicked()
     {
         SceneManager.LoadScene("Gameplay");
@@ -39,14 +39,14 @@ public class UiMainMenu : MonoBehaviour
 
     private void OnSettingsClicked()
     {
-        settingsCanvas.SetActive(true);
         mainMenuCanvas.SetActive(false);
+        settingsCanvas.SetActive(true);
     }
 
     private void OnCreditsClicked()
     {
-        creditsCanvas.SetActive(true);
         mainMenuCanvas.SetActive(false);
+        creditsCanvas.SetActive(true);
     }
 
     private void OnExitClicked()

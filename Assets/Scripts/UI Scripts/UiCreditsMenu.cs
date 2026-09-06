@@ -7,7 +7,6 @@ public class UiCreditsMenu : MonoBehaviour
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private UiManager pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnBack;
@@ -27,12 +26,18 @@ public class UiCreditsMenu : MonoBehaviour
     {
         creditsCanvas.SetActive(false);
 
-        if (pauseState.isPause)
+        // Consulto si se encuentra activo el script de la escena que se pausa
+        if (UiPauseManager.instance != null)
         {
-            pauseCanvas.SetActive(true);
+            if (UiPauseManager.instance.isPause) // Si el juego se encuentra en pausa
+            {
+                // Activo el panel de Pausa
+                pauseCanvas.SetActive(true);
+            }
         }
-        else
+        else // Si no se encuentra activo, significa que no está en pausa
         {
+            // Activo el panel de MainMenu
             mainMenuCanvas.SetActive(true);
         }
     }

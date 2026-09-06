@@ -9,7 +9,6 @@ public class UiPauseMenu : MonoBehaviour
     [SerializeField] private GameObject settingsCanvas;
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
-    [SerializeField] private UiManager pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnContinue;
@@ -27,22 +26,15 @@ public class UiPauseMenu : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.sceneCount > 1) // Si hay más de una escena activa, significa que el juego se encuentra en pausa
+        // Consulto si se encuentra activo el script de la escena que se pausa
+        if (UiPauseManager.instance != null)
         {
-            // Desactivo el panel de Main Menu y activo el de Pausa
-            mainMenuCanvas.SetActive(false);
-            pauseCanvas.SetActive(true);
-        }
-    }
-
-    private void Update()
-    {
-
-        if (pauseState.isPause) // Si el juego se encuentra en pausa
-        {
-            // Desactivo el panel de Main Menu y activo el de Pausa
-            mainMenuCanvas.SetActive(false);
-            pauseCanvas.SetActive(true);
+            if (UiPauseManager.instance.isPause) // Si el juego se encuentra en pausa
+            {
+                // Desactivo el panel de Main Menu y activo el de Pausa
+                mainMenuCanvas.SetActive(false);
+                pauseCanvas.SetActive(true);
+            }
         }
     }
 
@@ -57,6 +49,9 @@ public class UiPauseMenu : MonoBehaviour
     // Eventos de botones
     private void OnContinueClicked()
     {
+        // Vuelvo el estado de pausa a false
+        UiPauseManager.instance.isPause = false;
+
         // Reanudo el tiempo del juego
         Time.timeScale = 1;
 
