@@ -34,7 +34,6 @@ public class UiMainMenu : MonoBehaviour
     // Button Events
     private void OnStartClicked()
     {
-        mainMenuCanvas.SetActive(false);
         SceneManager.LoadScene("Gameplay");
     }
 

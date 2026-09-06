@@ -7,7 +7,7 @@ public class UiCreditsMenu : MonoBehaviour
     [SerializeField] private GameObject creditsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private UiPauseMenu pauseState;
+    [SerializeField] private UiManager pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnBack;

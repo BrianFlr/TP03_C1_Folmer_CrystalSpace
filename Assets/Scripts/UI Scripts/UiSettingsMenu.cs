@@ -8,7 +8,7 @@ public class UiSettingsMenu : MonoBehaviour
     [SerializeField] private GameObject settingsCanvas;
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject pauseCanvas;
-    [SerializeField] private UiPauseMenu pauseState;
+    [SerializeField] private UiManager pauseState;
 
     [Header("Buttons")]
     [SerializeField] private Button btnBack;
