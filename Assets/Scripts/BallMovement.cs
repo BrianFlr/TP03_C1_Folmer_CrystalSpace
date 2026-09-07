@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BallMove : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     [SerializeField] private float ballSpeed = 5f;
     [SerializeField] private float ballMaxSpeed = 25f;

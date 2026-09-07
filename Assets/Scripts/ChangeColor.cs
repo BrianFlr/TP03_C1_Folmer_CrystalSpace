@@ -10,6 +10,11 @@ public class ChangeColor : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    
+    private void Start()
+    {
+        
+    }
 
     private void Update()
     {   
@@ -18,6 +23,11 @@ public class ChangeColor : MonoBehaviour
         {
             spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
         }
-       
+    }
+
+    // Función para obtener los valores de colores seteados
+    private void GetColorsValues()
+    {
+
     }
 }
