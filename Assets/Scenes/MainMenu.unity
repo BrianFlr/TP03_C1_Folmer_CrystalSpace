@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 45371435}
   - component: {fileID: 45371434}
   m_Layer: 5
-  m_Name: Text Player 1 Long
+  m_Name: Text Player 1 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +364,7 @@ RectTransform:
   m_Father: {fileID: 1041466282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.33333334, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 82927132}
   - component: {fileID: 82927133}
   m_Layer: 5
-  m_Name: Slider Player 1 Long
+  m_Name: Slider Player 1 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2637,7 +2637,7 @@ RectTransform:
   m_Father: {fileID: 1430471007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2967,8 +2967,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 140073723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.33333334, y: 0}
+  m_AnchorMax: {x: 0.33333334, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4313,7 +4313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &782650437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4800,7 +4800,7 @@ RectTransform:
   m_Father: {fileID: 68304336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5609,8 +5609,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 154508691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.33333334, y: 0}
+  m_AnchorMax: {x: 0.33333334, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5858,7 +5858,7 @@ RectTransform:
   m_Father: {fileID: 1319423045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6002,7 +6002,7 @@ GameObject:
   - component: {fileID: 1103966792}
   - component: {fileID: 1103966791}
   m_Layer: 5
-  m_Name: Text Player 2 Long
+  m_Name: Text Player 2 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6251,7 +6251,7 @@ GameObject:
   - component: {fileID: 1124374580}
   - component: {fileID: 1124374579}
   m_Layer: 5
-  m_Name: Panel Long
+  m_Name: Panel Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6425,7 +6425,7 @@ RectTransform:
   m_Father: {fileID: 1522333121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6500,7 +6500,7 @@ RectTransform:
   m_Father: {fileID: 958889080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7921,7 +7921,7 @@ GameObject:
   - component: {fileID: 1628377125}
   - component: {fileID: 1628377124}
   m_Layer: 5
-  m_Name: Panel Player 1 Long
+  m_Name: Panel Player 1 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8278,7 +8278,7 @@ RectTransform:
   m_Father: {fileID: 164117714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8332,7 +8332,7 @@ GameObject:
   - component: {fileID: 1675755297}
   - component: {fileID: 1675755296}
   m_Layer: 5
-  m_Name: Panel Player 2 Long
+  m_Name: Panel Player 2 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8431,7 +8431,7 @@ RectTransform:
   m_Father: {fileID: 371112133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.33333334, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8565,7 +8565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1719336451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8656,8 +8656,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1987853745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.47368422, y: 0}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8862,12 +8862,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de61ad42e115e2347982d9934505869a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiSettingsSlidersLong
-  sliderPlayer1Long: {fileID: 82927133}
-  sliderPlayer2Long: {fileID: 1898485760}
-  textPlayer1Long: {fileID: 45371434}
-  textPlayer2Long: {fileID: 1103966791}
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
+  sliderPlayer1Lenght: {fileID: 82927133}
+  sliderPlayer2Lenght: {fileID: 1898485760}
+  textPlayer1Lenght: {fileID: 45371434}
+  textPlayer2Lenght: {fileID: 1103966791}
 --- !u!114 &1797543288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8884,8 +8882,6 @@ MonoBehaviour:
   sliderPlayer2Speed: {fileID: 1902936070}
   textPlayer1Speed: {fileID: 1829707058}
   textPlayer2Speed: {fileID: 886172238}
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
 --- !u!1 &1804001139
 GameObject:
   m_ObjectHideFlags: 0
@@ -9385,7 +9381,7 @@ GameObject:
   - component: {fileID: 1898485759}
   - component: {fileID: 1898485760}
   m_Layer: 5
-  m_Name: Slider Player 2 Long
+  m_Name: Slider Player 2 Lenght
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10262,8 +10258,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1105290873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.47368422, y: 0}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

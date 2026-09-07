@@ -10,10 +10,6 @@ public class UiSettingsSlidersColor : MonoBehaviour
     [SerializeField] private TMP_Text textPlayer1Color;
     [SerializeField] private TMP_Text textPlayer2Color;
 
-    [Header("Players")]
-    private SpriteRenderer Player1;
-    private SpriteRenderer Player2;
-
     private void Awake()
     {
         sliderPlayer1Color.onValueChanged.AddListener(OnPlayer1ColorChanged);
@@ -29,12 +25,18 @@ public class UiSettingsSlidersColor : MonoBehaviour
     // Eventos de sliders
     private void OnPlayer1ColorChanged(float value)
     {
-        Player1.color = new Color(value, value, value);
+        // Obtengo el valor del slider y lo guardo una plantilla para identificarla con esa clave
+        PlayerPrefs.SetFloat("Player1Color", value);
+        PlayerPrefs.Save();
+
         textPlayer1Color.text = value.ToString("F2");
     }
     private void OnPlayer2ColorChanged(float value)
     {
-        Player2.color = new Color(value, value, value);
+        // Obtengo el valor del slider y lo guardo una plantilla para identificarla con esa clave
+        PlayerPrefs.SetFloat("Player2Color", value);
+        PlayerPrefs.Save();
+
         textPlayer2Color.text = value.ToString("F2");
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1068488164717259837}
   - component: {fileID: 7692931117765816086}
   - component: {fileID: -8106100912917465700}
-  - component: {fileID: -4845568615874866908}
+  - component: {fileID: -73020027597394635}
   - component: {fileID: 3920140206149258181}
   - component: {fileID: 4188432349518530314}
   - component: {fileID: 1630628083158690291}
@@ -108,10 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a5ce6721106ec45b653c943c210732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  Speed: 5
+  playerId: 0
+  currentSpeed: 5
   moveUp: 119
   moveDown: 115
---- !u!114 &-4845568615874866908
+--- !u!114 &-73020027597394635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,12 +121,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5788056504614851482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b135ebbaf8d9b5a4e85ea4b0f0e675fe, type: 3}
+  m_Script: {fileID: 11500000, guid: dd369ca9b4e3d45439b6769e952126e9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rotation
-  rotateSpeed: 10
-  rotateLeft: 113
-  rotateRight: 101
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeLenght
+  playerId: 0
+  defaultLenght: 4
 --- !u!114 &3920140206149258181
 MonoBehaviour:
   m_ObjectHideFlags: 0

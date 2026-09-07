@@ -1,33 +1,50 @@
 using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
-{ 
-    [SerializeField] private KeyCode changeColor = KeyCode.R;
+{
+    // Creo un enum para diferenciar jugadores desde el editor
+    enum PlayerId
+    {
+        Player1 = 0,
+        Player2 = 1
+    }
 
+    [SerializeField] private PlayerId playerId;
+    [SerializeField] private float defaultColor = 255f;
+    private float newColor = 0f;
+
+    private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    
+
     private void Start()
     {
-        
-    }
-
-    private void Update()
-    {   
-        // Cambio de color del sprite
-        if (Input.GetKeyUp(changeColor))
+        // Dependiendo la ID de player, carga el color mediante la clave correspondiente con la que esta fue guardada
+        if (playerId == PlayerId.Player1)
         {
-            spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
+            GetPlayerColorsValues("Player1Color");
+        }
+        else
+        {
+            GetPlayerColorsValues("Player2Lenght");
         }
     }
 
-    // Función para obtener los valores de colores seteados
-    private void GetColorsValues()
+    private void FixedUpdate()
     {
+        // Cambio el color del player
+        spriteRenderer.color = new Color(newColor, defaultColor, newColor);
+        Debug.Log(PlayerPrefs.GetFloat("Player1Color"));
+    }
 
+    // Función para obtener los valores de colores seteados en settings y asignárselo al sprite
+    private void GetPlayerColorsValues(string playerPrefsKey) // La clave con la que guardé los colores es el parámetro a recibir 
+    {
+        newColor = PlayerPrefs.GetFloat(playerPrefsKey, defaultColor);
     }
 }

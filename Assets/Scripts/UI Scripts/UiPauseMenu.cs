@@ -26,7 +26,7 @@ public class UiPauseMenu : MonoBehaviour
 
     private void Start()
     {
-        // Consulto si se encuentra activo el script de la escena que se pausa
+        // Consulto si se encuentra activo el script de la escena que se pausa para evitar el error "null reference"
         if (UiPauseManager.instance != null)
         {
             if (UiPauseManager.instance.isPause) // Si el juego se encuentra en pausa

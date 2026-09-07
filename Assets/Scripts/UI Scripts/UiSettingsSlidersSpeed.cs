@@ -10,11 +10,6 @@ public class UiSettingsSlidersSpeed : MonoBehaviour
     [SerializeField] private TMP_Text textPlayer1Speed;
     [SerializeField] private TMP_Text textPlayer2Speed;
 
-    [Header("Players")]
-    [SerializeField] private Movement Player1;
-    [SerializeField] private Movement Player2;
-
-
     private void Awake()
     {
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged);
@@ -30,13 +25,21 @@ public class UiSettingsSlidersSpeed : MonoBehaviour
     // Eventos de sliders
     private void OnPlayer1SpeedChanged(float value)
     {
-        Player1.Speed = value;
+        // Obtengo el valor del slider y lo guardo en una plantilla para identificarla con esa clave
+        PlayerPrefs.SetFloat("Player1Speed", value);
+        PlayerPrefs.Save();
+
+        // Muestro el valor de la velocidad en el texto al lado del slider
         textPlayer1Speed.text = value.ToString("F2");
     }
 
     private void OnPlayer2SpeedChanged(float value)
     {
-        Player2.Speed = value;
+        // Obtengo el valor del slider y lo guardo en una plantilla para identificarla con esa clave
+        PlayerPrefs.SetFloat("Player2Speed", value);
+        PlayerPrefs.Save();
+
+        // Muestro el valor de la velocidad en el texto al lado del slider
         textPlayer2Speed.text = value.ToString("F2");
     }
 }
