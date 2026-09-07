@@ -10,7 +10,7 @@ public class ChangeColor : MonoBehaviour
     }
 
     [SerializeField] private PlayerId playerId;
-    [SerializeField] private float defaultColor = 255f;
+    [SerializeField] private float defaultColor = 0f;
     private float newColor = 0f;
 
     private Rigidbody2D rb;
@@ -31,15 +31,14 @@ public class ChangeColor : MonoBehaviour
         }
         else
         {
-            GetPlayerColorsValues("Player2Lenght");
+            GetPlayerColorsValues("Player2Color");
         }
     }
 
     private void FixedUpdate()
     {
         // Cambio el color del player
-        spriteRenderer.color = new Color(newColor, defaultColor, newColor);
-        Debug.Log(PlayerPrefs.GetFloat("Player1Color"));
+        spriteRenderer.color = new Color(newColor, defaultColor, Random.value);
     }
 
     // Función para obtener los valores de colores seteados en settings y asignárselo al sprite
